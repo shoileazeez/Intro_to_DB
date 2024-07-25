@@ -8,19 +8,22 @@ def connect_to_database():
             host="localhost",
             user="root",
             password="Likemerun@23",
-            database="alx_book_store"
+            # database="alx_book_store"
             )
         
         
         # Execute SQL statements using the execute() method on the cursor
         if mydb.is_connected():
-            print("Database 'alx_book_store' created successfully")
-            # Create a cursor object
             cursor = mydb.cursor()
+            # SQL query to create the database if it does not exist
+            create_database_query = "CREATE DATABASE IF NOT EXISTS alx_book_store"
             
-            cursor.execute("USE alx_book_store;")
-            record = cursor.fetchone()
-            print("you're connected to database:",record)
+            cursor.execute(create_database_query)
+            print("Database 'alx_book_store' created successfully:")
+            
+            # cursor.execute("USE alx_book_store;")
+            # record = cursor.fetchone()
+            # print("you're connected to database:",record)
             
             
     except Error as e:
