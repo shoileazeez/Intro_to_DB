@@ -1,3 +1,5 @@
+CREATE DATABASE alx_book_store ;
+
 CREATE TABLE Books (
     bookID INT PRIMARY KEY,
     title VARCHAR(130),
