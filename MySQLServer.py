@@ -27,7 +27,7 @@ def connect_to_database():
             
             
     except Error as e:
-        print("Error while connecting to MySQL", e)
+        print("mysql.connector.Error", e)
     finally:
         # Close the connection
         if (mydb.is_connected()):
