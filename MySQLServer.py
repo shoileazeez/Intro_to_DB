@@ -1,5 +1,5 @@
 import mysql.connector
-from mysql.connector import Error
+# from mysql.connector 
 
 # Replace with your connection details
 def connect_to_database():
@@ -26,7 +26,7 @@ def connect_to_database():
             # print("you're connected to database:",record)
             
             
-    except Error as e:
+    except mysql.connector.Error:
         print("mysql.connector.Error", e)
     finally:
         # Close the connection
