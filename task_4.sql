@@ -1,9 +1,6 @@
-SELECT * FROM books
+USE alx_book_store;
 
-INFORMATION_SCHEMA.COLUMNS", "COLUMN_NAME", "COLUMN_TYPE", "TABLE_SCHEMA = 'alx_book_store'", "TABLE_NAME = 'Books'
-
-
-SELECT 
+SELECT
     COLUMN_NAME, 
     DATA_TYPE, 
     IS_NULLABLE, 
